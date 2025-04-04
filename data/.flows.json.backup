@@ -1,0 +1,3204 @@
+[
+    {
+        "id": "971c70331dc64206",
+        "type": "tab",
+        "label": "insert_and_send_video",
+        "disabled": true,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "0297f5e2402ea7d2",
+        "type": "tab",
+        "label": "update_status_video",
+        "disabled": true,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "9020e2611526f3dc",
+        "type": "tab",
+        "label": "insert_object_attribute_send_attribute",
+        "disabled": true,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "49fdbf5725300670",
+        "type": "tab",
+        "label": "update_attribute",
+        "disabled": true,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "e2a52aad0a9cee3a",
+        "type": "tab",
+        "label": "frames",
+        "disabled": true,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "67431c152629ac42",
+        "type": "tab",
+        "label": "Rabbit to mysql",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "adc8cb5b47e57dbd",
+        "type": "websocket-listener",
+        "path": "/test",
+        "wholemsg": "false"
+    },
+    {
+        "id": "6268d6b674f4a894",
+        "type": "websocket-client",
+        "path": "ws://nodered:1880/ws/procesar_video",
+        "tls": "",
+        "wholemsg": "false",
+        "hb": "0",
+        "subprotocol": ""
+    },
+    {
+        "id": "27da340f2eed545b",
+        "type": "MySQLdatabase",
+        "name": "",
+        "host": "database",
+        "port": "3306",
+        "db": "dev",
+        "tz": "",
+        "charset": "UTF8"
+    },
+    {
+        "id": "90fdd3536400a0b3",
+        "type": "websocket-listener",
+        "path": "/update_cola_videos",
+        "wholemsg": "false"
+    },
+    {
+        "id": "082248e18940ebf0",
+        "type": "websocket-client",
+        "path": "ws://detector:5000",
+        "tls": "",
+        "wholemsg": "false",
+        "hb": "0",
+        "subprotocol": ""
+    },
+    {
+        "id": "79259823fe6e1dd8",
+        "type": "websocket-listener",
+        "path": "/insert_object_register",
+        "wholemsg": "false"
+    },
+    {
+        "id": "95d8c5559087e0d7",
+        "type": "websocket-listener",
+        "path": "",
+        "wholemsg": "false"
+    },
+    {
+        "id": "b904fb377d6a72e4",
+        "type": "websocket-listener",
+        "path": "/insert_video_register",
+        "wholemsg": "false"
+    },
+    {
+        "id": "7d463a3236de86bc",
+        "type": "websocket-client",
+        "path": "ws://nodered:1880/insert_video_register",
+        "tls": "",
+        "wholemsg": "false",
+        "hb": "0",
+        "subprotocol": ""
+    },
+    {
+        "id": "d4760e26e701e771",
+        "type": "websocket-client",
+        "path": "ws://detector:5000/",
+        "tls": "",
+        "wholemsg": "false",
+        "hb": "0",
+        "subprotocol": ""
+    },
+    {
+        "id": "67fc472ff7e566c0",
+        "type": "websocket-listener",
+        "path": "/update_video_status",
+        "wholemsg": "false"
+    },
+    {
+        "id": "35eab68ee8bbe506",
+        "type": "websocket-client",
+        "path": "ws://ocr:6000/",
+        "tls": "",
+        "wholemsg": "false",
+        "hb": "0",
+        "subprotocol": ""
+    },
+    {
+        "id": "471edd24a137e38f",
+        "type": "websocket-client",
+        "path": "ws://nodered:1880/insert_object_register",
+        "tls": "",
+        "wholemsg": "false",
+        "hb": "0",
+        "subprotocol": ""
+    },
+    {
+        "id": "3aa08f2ec040470b",
+        "type": "websocket-client",
+        "path": "ws://color:7000/",
+        "tls": "",
+        "wholemsg": "false",
+        "hb": "0",
+        "subprotocol": ""
+    },
+    {
+        "id": "b197b22d0e3ba51e",
+        "type": "websocket-client",
+        "path": "ws://nodered:1880/test",
+        "tls": "",
+        "wholemsg": "false",
+        "hb": "0",
+        "subprotocol": ""
+    },
+    {
+        "id": "6cb77a8cfdac5923",
+        "type": "websocket-listener",
+        "path": "/update_attribute_status",
+        "wholemsg": "false"
+    },
+    {
+        "id": "2ec4eb8df27510a3",
+        "type": "websocket-client",
+        "path": "ws://nodered:1880/update_attribute_status",
+        "tls": "",
+        "wholemsg": "false",
+        "hb": "0",
+        "subprotocol": ""
+    },
+    {
+        "id": "d46f421d98bbe98b",
+        "type": "websocket-listener",
+        "path": "/frame_register",
+        "wholemsg": "false"
+    },
+    {
+        "id": "15960197c694b1b1",
+        "type": "websocket-client",
+        "path": "ws://nodered:1880/frame_register",
+        "tls": "",
+        "wholemsg": "false",
+        "hb": "0",
+        "subprotocol": ""
+    },
+    {
+        "id": "e7b4b2caae15bc6b",
+        "type": "websocket-listener",
+        "path": "/update_frame_status",
+        "wholemsg": "false"
+    },
+    {
+        "id": "e8940abdb5faafb8",
+        "type": "websocket-client",
+        "path": "ws://placa_detector:6000/",
+        "tls": "",
+        "wholemsg": "false",
+        "hb": "0",
+        "subprotocol": ""
+    },
+    {
+        "id": "045684e35cdae2c3",
+        "type": "amqp-broker",
+        "name": "rabbitmq",
+        "host": "10.23.63.56",
+        "port": "5672",
+        "vhost": "",
+        "tls": false,
+        "credsFromSettings": false
+    },
+    {
+        "id": "effa98becb4ec386",
+        "type": "websocket in",
+        "z": "971c70331dc64206",
+        "name": "",
+        "server": "b904fb377d6a72e4",
+        "client": "",
+        "x": 230,
+        "y": 220,
+        "wires": [
+            [
+                "ea5796f39229847e"
+            ]
+        ]
+    },
+    {
+        "id": "ea5796f39229847e",
+        "type": "function",
+        "z": "971c70331dc64206",
+        "name": "Parse json",
+        "func": "msg.payload = JSON.parse(msg.payload)\nmsg.camera_id = msg.payload.camera_id; \nmsg.file_path = msg.payload.file_path;\nmsg.frame_pross = msg.payload.frames_pross;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 220,
+        "wires": [
+            [
+                "d8b5360c432c92a6",
+                "f67ef547399ef1d0"
+            ]
+        ]
+    },
+    {
+        "id": "f67ef547399ef1d0",
+        "type": "template",
+        "z": "971c70331dc64206",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "INSERT INTO videos \n(camera_id, epoch, file_path, status, frames_pross, count_pross) \nVALUES ({{payload.camera_id}},\n{{payload.epoch}},\n\"{{{payload.file_path}}}\", \n{{payload.status}}, \n\"{{{payload.frames_pross}}}\", \n{{payload.count_pross}})",
+        "output": "str",
+        "x": 700,
+        "y": 220,
+        "wires": [
+            [
+                "eabfcfcd70490fc5",
+                "5f2ec763e86932f0"
+            ]
+        ]
+    },
+    {
+        "id": "eabfcfcd70490fc5",
+        "type": "change",
+        "z": "971c70331dc64206",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg",
+                "dc": true
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 710,
+        "y": 280,
+        "wires": [
+            [
+                "b3dd8ee168dd4cd6",
+                "de0ac23b449ac069"
+            ]
+        ]
+    },
+    {
+        "id": "b3dd8ee168dd4cd6",
+        "type": "mysql",
+        "z": "971c70331dc64206",
+        "mydb": "27da340f2eed545b",
+        "name": "",
+        "x": 710,
+        "y": 340,
+        "wires": [
+            [
+                "f870c430e33aa79f"
+            ]
+        ]
+    },
+    {
+        "id": "d8b5360c432c92a6",
+        "type": "debug",
+        "z": "971c70331dc64206",
+        "name": "debug 9",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 640,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "064f8f49d0b25d90",
+        "type": "websocket out",
+        "z": "971c70331dc64206",
+        "name": "",
+        "server": "",
+        "client": "7d463a3236de86bc",
+        "x": 690,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "e3b54d5cde2d87d0",
+        "type": "change",
+        "z": "971c70331dc64206",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"camera_id\":1,\"epoch\":2,\"file_path\":\"output/test.mp4\",\"status\":0,\"frames_pross\":\"111111111111100000000\",\"count_pross\":30}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 380,
+        "y": 480,
+        "wires": [
+            [
+                "064f8f49d0b25d90"
+            ]
+        ]
+    },
+    {
+        "id": "ab9534228283c026",
+        "type": "inject",
+        "z": "971c70331dc64206",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "v": "",
+                "vt": "date"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 180,
+        "y": 480,
+        "wires": [
+            [
+                "e3b54d5cde2d87d0"
+            ]
+        ]
+    },
+    {
+        "id": "de0ac23b449ac069",
+        "type": "debug",
+        "z": "971c70331dc64206",
+        "name": "debug 10",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 960,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "5f2ec763e86932f0",
+        "type": "debug",
+        "z": "971c70331dc64206",
+        "name": "debug 11",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 880,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "f870c430e33aa79f",
+        "type": "function",
+        "z": "971c70331dc64206",
+        "name": "function 1",
+        "func": "if (msg.payload.affectedRows > 0) {\n    msg.payload = {\n        \"id\": msg.payload.insertId,\n        \"camera_id\": msg.camera_id,\n        \"file_path\": msg.file_path,\n        \"frames_pross\": msg.frame_pross\n    };\n    delete (msg.topic);\n    delete (msg.camera_id);\n    delete (msg.file_path);\n    delete (msg.frame_pross);\n    delete (msg._session);\n    // Envía el mensaje convertido por WebSocket\n    return msg;\n} else {\n    msg.payload = { success: false, message: \"No se insertaron registros\" };\n\n    delete(msg.topic);\n    return msg;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 860,
+        "y": 340,
+        "wires": [
+            [
+                "1c8a29f952e2c220",
+                "e374f7c02746c3ad"
+            ]
+        ]
+    },
+    {
+        "id": "e374f7c02746c3ad",
+        "type": "websocket out",
+        "z": "971c70331dc64206",
+        "name": "",
+        "server": "",
+        "client": "d4760e26e701e771",
+        "x": 1170,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "1c8a29f952e2c220",
+        "type": "debug",
+        "z": "971c70331dc64206",
+        "name": "debug 15",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1160,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "3afda8816fd175f5",
+        "type": "function",
+        "z": "0297f5e2402ea7d2",
+        "name": "Parse json",
+        "func": "msg.payload = JSON.parse(msg.payload)\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 160,
+        "wires": [
+            [
+                "5a703ed43413e419",
+                "d828a0ed5f0a20e1"
+            ]
+        ]
+    },
+    {
+        "id": "c6a56ef58c519a51",
+        "type": "websocket in",
+        "z": "0297f5e2402ea7d2",
+        "name": "",
+        "server": "67fc472ff7e566c0",
+        "client": "",
+        "x": 230,
+        "y": 160,
+        "wires": [
+            [
+                "3afda8816fd175f5"
+            ]
+        ]
+    },
+    {
+        "id": "5a703ed43413e419",
+        "type": "debug",
+        "z": "0297f5e2402ea7d2",
+        "name": "debug 12",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 700,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "d828a0ed5f0a20e1",
+        "type": "template",
+        "z": "0297f5e2402ea7d2",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "UPDATE videos \nSET status = 1 \nWHERE id = {{payload.id}}",
+        "output": "str",
+        "x": 680,
+        "y": 160,
+        "wires": [
+            [
+                "0f2f8d58f296495d"
+            ]
+        ]
+    },
+    {
+        "id": "0f2f8d58f296495d",
+        "type": "change",
+        "z": "0297f5e2402ea7d2",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg",
+                "dc": true
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 690,
+        "y": 220,
+        "wires": [
+            [
+                "d35e4aa4f81828d5"
+            ]
+        ]
+    },
+    {
+        "id": "d35e4aa4f81828d5",
+        "type": "mysql",
+        "z": "0297f5e2402ea7d2",
+        "mydb": "27da340f2eed545b",
+        "name": "",
+        "x": 690,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "74cc2a05637c76ab",
+        "type": "function",
+        "z": "9020e2611526f3dc",
+        "name": "Parse json",
+        "func": "msg.payload = JSON.parse(msg.payload);\nmsg.attribute = [1,2];\nmsg.category_id = msg.payload.category_id;\nmsg.camera_id = msg.payload.camera_id;\nmsg.accuracy = msg.payload.accuracy;\nmsg.epoch = msg.payload.epoch;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 180,
+        "wires": [
+            [
+                "75a541e471243282",
+                "d8392c4f3e7d335c"
+            ]
+        ]
+    },
+    {
+        "id": "c264714831b1d7d5",
+        "type": "websocket in",
+        "z": "9020e2611526f3dc",
+        "name": "",
+        "server": "79259823fe6e1dd8",
+        "client": "",
+        "x": 210,
+        "y": 180,
+        "wires": [
+            [
+                "74cc2a05637c76ab"
+            ]
+        ]
+    },
+    {
+        "id": "75a541e471243282",
+        "type": "debug",
+        "z": "9020e2611526f3dc",
+        "name": "debug 6",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 660,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "d8392c4f3e7d335c",
+        "type": "template",
+        "z": "9020e2611526f3dc",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "INSERT INTO object \n(frame_id, category_id, accuracy, coords, epoch)\nVALUES ({{payload.frame_id}},\n{{payload.category_id}},\n{{payload.accuracy}}, \n\"{{{payload.coords}}}\", \n{{payload.epoch}})",
+        "output": "str",
+        "x": 660,
+        "y": 180,
+        "wires": [
+            [
+                "c71c9e3ec92d8be6"
+            ]
+        ]
+    },
+    {
+        "id": "c71c9e3ec92d8be6",
+        "type": "change",
+        "z": "9020e2611526f3dc",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg",
+                "dc": true
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 670,
+        "y": 240,
+        "wires": [
+            [
+                "387c5437e342f9af"
+            ]
+        ]
+    },
+    {
+        "id": "387c5437e342f9af",
+        "type": "mysql",
+        "z": "9020e2611526f3dc",
+        "mydb": "27da340f2eed545b",
+        "name": "",
+        "x": 670,
+        "y": 300,
+        "wires": [
+            [
+                "d75a93cda7d3a410"
+            ]
+        ]
+    },
+    {
+        "id": "ec036deb1091a4ec",
+        "type": "websocket out",
+        "z": "9020e2611526f3dc",
+        "name": "",
+        "server": "",
+        "client": "e8940abdb5faafb8",
+        "x": 1750,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "f0dae26c3ef06f7d",
+        "type": "template",
+        "z": "9020e2611526f3dc",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "INSERT INTO detections \n(attribute_id, object_id, status)\nVALUES ({{payload.attribute_id}},\n{{payload.object_id}},\n{{payload.status}})",
+        "output": "str",
+        "x": 1000,
+        "y": 420,
+        "wires": [
+            [
+                "81699453d1130ee3"
+            ]
+        ]
+    },
+    {
+        "id": "81699453d1130ee3",
+        "type": "change",
+        "z": "9020e2611526f3dc",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg",
+                "dc": true
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1010,
+        "y": 480,
+        "wires": [
+            [
+                "8b7c5174f36b7f7f"
+            ]
+        ]
+    },
+    {
+        "id": "8b7c5174f36b7f7f",
+        "type": "mysql",
+        "z": "9020e2611526f3dc",
+        "mydb": "27da340f2eed545b",
+        "name": "",
+        "x": 990,
+        "y": 540,
+        "wires": [
+            [
+                "434b4db71e99f30c",
+                "775a8454cac647f5"
+            ]
+        ]
+    },
+    {
+        "id": "fcc1b96184e09cd2",
+        "type": "websocket out",
+        "z": "9020e2611526f3dc",
+        "name": "",
+        "server": "",
+        "client": "471edd24a137e38f",
+        "x": 630,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "8bc22438a6046180",
+        "type": "change",
+        "z": "9020e2611526f3dc",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"frame_id\":7,\"category_id\":3,\"accuracy\":85,\"coords\":\"[16 58 41 21]\",\"epoch\":123489465,\"camera_id\":1}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 320,
+        "y": 400,
+        "wires": [
+            [
+                "fcc1b96184e09cd2",
+                "91d0aa26cc44ca2e"
+            ]
+        ]
+    },
+    {
+        "id": "af0734949949dd3a",
+        "type": "inject",
+        "z": "9020e2611526f3dc",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "v": "",
+                "vt": "date"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 400,
+        "wires": [
+            [
+                "8bc22438a6046180"
+            ]
+        ]
+    },
+    {
+        "id": "91d0aa26cc44ca2e",
+        "type": "debug",
+        "z": "9020e2611526f3dc",
+        "name": "debug 16",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 480,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "d75a93cda7d3a410",
+        "type": "function",
+        "z": "9020e2611526f3dc",
+        "name": "function 6",
+        "func": "// Si category_id es 3, 6 u 8, detener el flujo\nif (![3, 6, 8].includes(msg.category_id)) {\n    node.status({ fill: \"red\", shape: \"dot\", text: \"Corte por category_id\" });\n    return null;\n}\n\n// Si accuracy es menor que 70, detener el flujo\nif (msg.accuracy < 70) {\n    node.status({ fill: \"yellow\", shape: \"dot\", text: \"Corte por accuracy\" });\n    return null;\n}\n\n// Si la consulta afectó filas, procesar el mensaje\nif (msg.payload.affectedRows > 0) {\n    msg.payload = {\n        \"object_id\": msg.payload.insertId,\n        \"epoch\": msg.epoch,\n        \"camera_id\": msg.camera_id\n    };\n\n    // Eliminar propiedades innecesarias\n    delete msg.topic;\n    delete msg._session;\n    delete msg._msgid;\n\n    node.status({ fill: \"blue\", shape: \"ring\", text: \"continue\" });\n    return msg;\n}\n\n// Si no se insertaron registros, detener el flujo\nnode.status({ fill: \"blue\", shape: \"ring\", text: \"Corte por affectedRows\" });\nreturn null;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 300,
+        "wires": [
+            [
+                "acb3a5d5ba08850b"
+            ]
+        ]
+    },
+    {
+        "id": "acb3a5d5ba08850b",
+        "type": "split",
+        "z": "9020e2611526f3dc",
+        "name": "",
+        "splt": "\\n",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "",
+        "x": 990,
+        "y": 300,
+        "wires": [
+            [
+                "94f59e44a7078d16"
+            ]
+        ]
+    },
+    {
+        "id": "775a8454cac647f5",
+        "type": "debug",
+        "z": "9020e2611526f3dc",
+        "name": "debug 7",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1240,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "32a5f51fed2cc29c",
+        "type": "debug",
+        "z": "9020e2611526f3dc",
+        "name": "debug 8",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1620,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "07e0d27eda923b4b",
+        "type": "switch",
+        "z": "9020e2611526f3dc",
+        "name": "",
+        "property": "attribute",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "2",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1410,
+        "y": 540,
+        "wires": [
+            [
+                "32a5f51fed2cc29c",
+                "ec036deb1091a4ec"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "434b4db71e99f30c",
+        "type": "function",
+        "z": "9020e2611526f3dc",
+        "name": "function 3",
+        "func": "if (msg.payload.affectedRows > 0) {\n    msg.payload = {\n        \"detection_id\": msg.payload.insertId,\n        \"epoch\":msg.epoch,\n        \"camera_id\": msg.camera_id\n    };\n    delete (msg.topic);\n    delete (msg._msgid);\n    // Envía el mensaje convertido por WebSocket\n    return msg;\n} else {\n    msg.payload = { success: false, message: \"No se insertaron registros\" };\n\n    delete(msg.topic);\n    delete (msg._msgid);\n    return msg;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1180,
+        "y": 540,
+        "wires": [
+            [
+                "07e0d27eda923b4b"
+            ]
+        ]
+    },
+    {
+        "id": "90d1a72319c2b04b",
+        "type": "websocket out",
+        "z": "9020e2611526f3dc",
+        "name": "",
+        "server": "",
+        "client": "3aa08f2ec040470b",
+        "x": 1720,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "94f59e44a7078d16",
+        "type": "function",
+        "z": "9020e2611526f3dc",
+        "name": "function 2",
+        "func": "msg.payload = {\n        \"object_id\": msg.payload.object_id,\n        \"epoch\": msg.payload.epoch,\n        \"status\": 0,\n        \"attribute_id\": msg.attribute\n    };\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1000,
+        "y": 360,
+        "wires": [
+            [
+                "f0dae26c3ef06f7d",
+                "d4d2afb06ea84834"
+            ]
+        ]
+    },
+    {
+        "id": "d4d2afb06ea84834",
+        "type": "debug",
+        "z": "9020e2611526f3dc",
+        "name": "debug 13",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1160,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "c8014d36133941b5",
+        "type": "websocket out",
+        "z": "9020e2611526f3dc",
+        "name": "",
+        "server": "",
+        "client": "e8940abdb5faafb8",
+        "x": 1750,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "521f62dffe32d4c2",
+        "type": "change",
+        "z": "9020e2611526f3dc",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"detection_id\":4274,\"epoch\":17392280002040,\"camera_id\":24}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1480,
+        "y": 660,
+        "wires": [
+            [
+                "c8014d36133941b5",
+                "4376e7fab6f0bcfe"
+            ]
+        ]
+    },
+    {
+        "id": "ae623fa1a5d170c3",
+        "type": "inject",
+        "z": "9020e2611526f3dc",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "v": "",
+                "vt": "date"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1280,
+        "y": 660,
+        "wires": [
+            [
+                "521f62dffe32d4c2"
+            ]
+        ]
+    },
+    {
+        "id": "4376e7fab6f0bcfe",
+        "type": "debug",
+        "z": "9020e2611526f3dc",
+        "name": "debug 14",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1640,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "37c9497fbbb6f6af",
+        "type": "function",
+        "z": "49fdbf5725300670",
+        "name": "Parse json",
+        "func": "msg.payload = JSON.parse(msg.payload)\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 200,
+        "wires": [
+            [
+                "364be01c983c0aff",
+                "28142b7c2d5ba894"
+            ]
+        ]
+    },
+    {
+        "id": "6d7dc1860e9c0779",
+        "type": "websocket in",
+        "z": "49fdbf5725300670",
+        "name": "",
+        "server": "6cb77a8cfdac5923",
+        "client": "",
+        "x": 220,
+        "y": 200,
+        "wires": [
+            [
+                "37c9497fbbb6f6af"
+            ]
+        ]
+    },
+    {
+        "id": "364be01c983c0aff",
+        "type": "debug",
+        "z": "49fdbf5725300670",
+        "name": "debug 17",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 740,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "28142b7c2d5ba894",
+        "type": "template",
+        "z": "49fdbf5725300670",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "UPDATE detections d\nSET d.description = \"{{{payload.description}}}\",\nd.accuracy = {{payload.accuracy}},\nd.init_time = \"{{{payload.init_time}}}\",\nd.final_time = \"{{{payload.final_time}}}\",\nd.status = {{payload.status}}\nWHERE d.id = {{payload.detection_id}};",
+        "output": "str",
+        "x": 720,
+        "y": 200,
+        "wires": [
+            [
+                "86b87b4cb6cd6d25"
+            ]
+        ]
+    },
+    {
+        "id": "86b87b4cb6cd6d25",
+        "type": "change",
+        "z": "49fdbf5725300670",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg",
+                "dc": true
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 730,
+        "y": 260,
+        "wires": [
+            [
+                "0833f65790726382"
+            ]
+        ]
+    },
+    {
+        "id": "0833f65790726382",
+        "type": "mysql",
+        "z": "49fdbf5725300670",
+        "mydb": "27da340f2eed545b",
+        "name": "",
+        "x": 730,
+        "y": 320,
+        "wires": [
+            [
+                "d7419777b3c06058"
+            ]
+        ]
+    },
+    {
+        "id": "d7376ad115643f68",
+        "type": "websocket out",
+        "z": "49fdbf5725300670",
+        "name": "",
+        "server": "",
+        "client": "2ec4eb8df27510a3",
+        "x": 660,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "763e33812526f34e",
+        "type": "change",
+        "z": "49fdbf5725300670",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"detection_id\":3267041,\"description\":\"\",\"accuracy\":0,\"init_time\":1738356993712,\"final_time\":1738356993726,\"status\":2}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 340,
+        "y": 460,
+        "wires": [
+            [
+                "d7376ad115643f68",
+                "607b88b90502c928"
+            ]
+        ]
+    },
+    {
+        "id": "ad08a84171449c44",
+        "type": "inject",
+        "z": "49fdbf5725300670",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "v": "",
+                "vt": "date"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 460,
+        "wires": [
+            [
+                "763e33812526f34e"
+            ]
+        ]
+    },
+    {
+        "id": "607b88b90502c928",
+        "type": "debug",
+        "z": "49fdbf5725300670",
+        "name": "debug 18",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 500,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "d7419777b3c06058",
+        "type": "debug",
+        "z": "49fdbf5725300670",
+        "name": "debug 19",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 980,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "8bc2f536f09da0e0",
+        "type": "websocket in",
+        "z": "e2a52aad0a9cee3a",
+        "name": "",
+        "server": "d46f421d98bbe98b",
+        "client": "",
+        "x": 130,
+        "y": 140,
+        "wires": [
+            [
+                "d1361610f7d1a9b3"
+            ]
+        ]
+    },
+    {
+        "id": "d1361610f7d1a9b3",
+        "type": "function",
+        "z": "e2a52aad0a9cee3a",
+        "name": "Parse json",
+        "func": "msg.payload = JSON.parse(msg.payload)\nmsg.camera_id = msg.payload.camera_id; \nmsg.epoch = msg.payload.epoch;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 140,
+        "wires": [
+            [
+                "546b0a6dbc3f173a",
+                "bf499af478660742"
+            ]
+        ]
+    },
+    {
+        "id": "bf499af478660742",
+        "type": "template",
+        "z": "e2a52aad0a9cee3a",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "INSERT INTO frames \n(camera_id, epoch, candidate) \nVALUES ({{payload.camera_id}},\n{{payload.epoch}},\n{{payload.candidate}})",
+        "output": "str",
+        "x": 620,
+        "y": 140,
+        "wires": [
+            [
+                "02beb4d611a08cc0",
+                "7d0f2dc13f3b618f"
+            ]
+        ]
+    },
+    {
+        "id": "02beb4d611a08cc0",
+        "type": "change",
+        "z": "e2a52aad0a9cee3a",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg",
+                "dc": true
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 630,
+        "y": 200,
+        "wires": [
+            [
+                "7cbc0ba419cce881",
+                "b5befe92bbf2bc10"
+            ]
+        ]
+    },
+    {
+        "id": "7cbc0ba419cce881",
+        "type": "mysql",
+        "z": "e2a52aad0a9cee3a",
+        "mydb": "27da340f2eed545b",
+        "name": "",
+        "x": 630,
+        "y": 260,
+        "wires": [
+            [
+                "3cfab750f76d8546"
+            ]
+        ]
+    },
+    {
+        "id": "546b0a6dbc3f173a",
+        "type": "debug",
+        "z": "e2a52aad0a9cee3a",
+        "name": "debug 1",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 560,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "be6e1fcd783a682a",
+        "type": "websocket out",
+        "z": "e2a52aad0a9cee3a",
+        "name": "",
+        "server": "",
+        "client": "15960197c694b1b1",
+        "x": 610,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "fb0b664c1d47fdf2",
+        "type": "change",
+        "z": "e2a52aad0a9cee3a",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"camera_id\":24,\"epoch\":1739219578787,\"candidate\":1}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 320,
+        "y": 360,
+        "wires": [
+            [
+                "be6e1fcd783a682a"
+            ]
+        ]
+    },
+    {
+        "id": "70a3274ead3f9f1b",
+        "type": "inject",
+        "z": "e2a52aad0a9cee3a",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "v": "",
+                "vt": "date"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 360,
+        "wires": [
+            [
+                "fb0b664c1d47fdf2"
+            ]
+        ]
+    },
+    {
+        "id": "b5befe92bbf2bc10",
+        "type": "debug",
+        "z": "e2a52aad0a9cee3a",
+        "name": "debug 2",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 880,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "7d0f2dc13f3b618f",
+        "type": "debug",
+        "z": "e2a52aad0a9cee3a",
+        "name": "debug 3",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 800,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "3cfab750f76d8546",
+        "type": "function",
+        "z": "e2a52aad0a9cee3a",
+        "name": "function 4",
+        "func": "if (msg.payload.affectedRows > 0) {\n    msg.payload = {\n        \"frame_id\": msg.payload.insertId,\n        \"camera_id\": msg.camera_id,\n        \"epoch\": msg.epoch\n    };\n    delete (msg.topic);\n    delete (msg.camera_id);\n    delete (msg._session);\n    // Envía el mensaje convertido por WebSocket\n    return msg;\n} else {\n    msg.payload = { success: false, message: \"No se insertaron registros\" };\n\n    delete(msg.topic);\n    return msg;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 780,
+        "y": 260,
+        "wires": [
+            [
+                "61a791caa3e3ccc1",
+                "9ac66941b064cd0d"
+            ]
+        ]
+    },
+    {
+        "id": "9ac66941b064cd0d",
+        "type": "websocket out",
+        "z": "e2a52aad0a9cee3a",
+        "name": "",
+        "server": "",
+        "client": "d4760e26e701e771",
+        "x": 1090,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "61a791caa3e3ccc1",
+        "type": "debug",
+        "z": "e2a52aad0a9cee3a",
+        "name": "debug 4",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1080,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "282a205dcef5ef74",
+        "type": "function",
+        "z": "e2a52aad0a9cee3a",
+        "name": "Parse json",
+        "func": "msg.payload = JSON.parse(msg.payload)\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 540,
+        "wires": [
+            [
+                "16b285f965eba859",
+                "aa7fa43d90a15c9a"
+            ]
+        ]
+    },
+    {
+        "id": "5ac0ef7d05ccd47e",
+        "type": "websocket in",
+        "z": "e2a52aad0a9cee3a",
+        "name": "",
+        "server": "e7b4b2caae15bc6b",
+        "client": "",
+        "x": 150,
+        "y": 540,
+        "wires": [
+            [
+                "282a205dcef5ef74"
+            ]
+        ]
+    },
+    {
+        "id": "16b285f965eba859",
+        "type": "debug",
+        "z": "e2a52aad0a9cee3a",
+        "name": "debug 5",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 620,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "aa7fa43d90a15c9a",
+        "type": "template",
+        "z": "e2a52aad0a9cee3a",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "UPDATE frames \nSET status = 1 \nWHERE id = {{payload.frame_id}}",
+        "output": "str",
+        "x": 600,
+        "y": 540,
+        "wires": [
+            [
+                "16ae122a5222deeb"
+            ]
+        ]
+    },
+    {
+        "id": "16ae122a5222deeb",
+        "type": "change",
+        "z": "e2a52aad0a9cee3a",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg",
+                "dc": true
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 610,
+        "y": 600,
+        "wires": [
+            [
+                "3a3df17b45d482f8"
+            ]
+        ]
+    },
+    {
+        "id": "3a3df17b45d482f8",
+        "type": "mysql",
+        "z": "e2a52aad0a9cee3a",
+        "mydb": "27da340f2eed545b",
+        "name": "",
+        "x": 610,
+        "y": 660,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c7b11ca1f372cdca",
+        "type": "amqp-in",
+        "z": "e2a52aad0a9cee3a",
+        "name": "",
+        "broker": "045684e35cdae2c3",
+        "prefetch": 0,
+        "reconnectOnError": false,
+        "noAck": false,
+        "exchangeName": "frames",
+        "exchangeType": "fanout",
+        "exchangeRoutingKey": "",
+        "exchangeDurable": true,
+        "queueName": "insertFrameDB",
+        "queueType": "quorum",
+        "queueExclusive": false,
+        "queueDurable": true,
+        "queueAutoDelete": false,
+        "headers": "{}",
+        "x": 170,
+        "y": 1020,
+        "wires": [
+            [
+                "1f71f723cd85f7bb"
+            ]
+        ]
+    },
+    {
+        "id": "f6701946e4c3236e",
+        "type": "mysql",
+        "z": "e2a52aad0a9cee3a",
+        "mydb": "27da340f2eed545b",
+        "name": "",
+        "x": 1190,
+        "y": 1100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9650650a5f95bfc4",
+        "type": "function",
+        "z": "e2a52aad0a9cee3a",
+        "name": "function 5",
+        "func": "// Obtener el caché correspondiente\nvar cache = global.get(\"frames\") || [];\n\n// Agregar el nuevo mensaje al caché\ncache.push(msg.payload);\n\n// Guardar en el contexto global\nglobal.set(\"frames\", cache);\n\nreturn null; // No enviamos nada todavía\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
+        "y": 1020,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5da698c46836b538",
+        "type": "debug",
+        "z": "e2a52aad0a9cee3a",
+        "name": "debug 20",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 760,
+        "y": 1240,
+        "wires": []
+    },
+    {
+        "id": "cb51d6418be73772",
+        "type": "template",
+        "z": "e2a52aad0a9cee3a",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "INSERT INTO frames (camera_id, epoch, status, candidate) VALUES ({{payload.camera_id}}, {{payload.epoch_frame}}, {{payload.status_frame}}, {{payload.candidate_frame}})\n",
+        "output": "str",
+        "x": 740,
+        "y": 1100,
+        "wires": [
+            [
+                "357c087869003d73"
+            ]
+        ]
+    },
+    {
+        "id": "44230dca5f94049d",
+        "type": "function",
+        "z": "e2a52aad0a9cee3a",
+        "name": "function 8",
+        "func": "// Obtener los mensajes almacenados en caché\nvar cache = global.get(\"frames\") || [];\n\n// Si hay datos en caché\nif (cache.length > 0) {\n    // Copiar los datos actuales antes de vaciar el caché\n    var cacheCopy = [...cache];\n\n    // Devolver múltiples mensajes\n    var messages = cacheCopy.map(item => ({\n        payload: {\n            camera_id: item.camera_id,\n            epoch_frame: item.epoch_frame,\n            status_frame: item.status_frame,\n            candidate_frame: item.candidate_frame\n        }\n    }));\n\n    // Vaciar solo los datos procesados\n    global.set(\"frames\", cache.filter(item => !cacheCopy.includes(item)));\n\n    return [messages];\n}\n\nreturn null; // No hacer nada si no hay datos\n\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
+        "y": 1100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "357c087869003d73",
+        "type": "change",
+        "z": "e2a52aad0a9cee3a",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg",
+                "dc": true
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 970,
+        "y": 1100,
+        "wires": [
+            [
+                "f6701946e4c3236e"
+            ]
+        ]
+    },
+    {
+        "id": "af8590c592df49e2",
+        "type": "amqp-in",
+        "z": "e2a52aad0a9cee3a",
+        "name": "",
+        "broker": "045684e35cdae2c3",
+        "prefetch": 0,
+        "reconnectOnError": false,
+        "noAck": false,
+        "exchangeName": "objs_candidate",
+        "exchangeType": "fanout",
+        "exchangeRoutingKey": "",
+        "exchangeDurable": true,
+        "queueName": "objsDB",
+        "queueType": "quorum",
+        "queueExclusive": false,
+        "queueDurable": true,
+        "queueAutoDelete": false,
+        "headers": "{}",
+        "x": 180,
+        "y": 1280,
+        "wires": [
+            [
+                "5ba0e360071ab949",
+                "6abaa89782f8691e"
+            ]
+        ]
+    },
+    {
+        "id": "7748722576dfaeeb",
+        "type": "mysql",
+        "z": "e2a52aad0a9cee3a",
+        "mydb": "27da340f2eed545b",
+        "name": "",
+        "x": 1170,
+        "y": 1360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a0616c2f001ac631",
+        "type": "inject",
+        "z": "e2a52aad0a9cee3a",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "5",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 190,
+        "y": 1360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "aba218748d82f75a",
+        "type": "template",
+        "z": "e2a52aad0a9cee3a",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "INSERT INTO object \n(frame_id, object_id, category_id, accuracy, coords, epoch)\nVALUES ({{payload.frame_id}},\n{{payload.object_id}},\n{{payload.category_id}},\n{{payload.accuracy}}, \n\"{{{payload.coords}}}\", \n{{payload.epoch_object}})",
+        "output": "str",
+        "x": 760,
+        "y": 1360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5c0e7b47128b59c0",
+        "type": "function",
+        "z": "e2a52aad0a9cee3a",
+        "name": "function 10",
+        "func": "var cache = global.get(\"objsDB\") || [];\n\ncache.push(msg.payload);\n// Guardar en el contexto global\nglobal.set(\"objsDB\", cache);\n\nreturn null; // No enviamos nada todavía\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 1280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5c677bcdd2007783",
+        "type": "change",
+        "z": "e2a52aad0a9cee3a",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg",
+                "dc": true
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 970,
+        "y": 1360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "10c4ba5a07cd1fc5",
+        "type": "function",
+        "z": "e2a52aad0a9cee3a",
+        "name": "function 9",
+        "func": "var cache = global.get(\"objsDB\") || [];\nvar outputMessages = [];\nvar newCache = []; // Para almacenar solo los mensajes no procesados\n\ncache.forEach((message) => {\n    let frame_id = message.camera_id + message.epoch_frame;\n    let hasObjects = false;\n\n    // **Payload para frame_summary**\n    outputMessages.push({\n        payload: {\n            type: \"frame\",\n            frame_id: frame_id,\n            n_objects: message.n_objects,\n            init_time_frame: message.init_time_frame,\n            final_time_frame: message.final_time_frame\n        }\n    });\n\n    // Extraer objetos de object_dict\n    Object.entries(message.object_dict || {}).forEach(([category, objects]) => {\n        objects.forEach(obj => {\n            outputMessages.push({\n                payload: {\n                    type: \"object\",\n                    frame_id: frame_id,\n                    category_id: category,\n                    accuracy: obj.accuracy,\n                    coords: obj.coords,\n                    epoch_object: obj.epoch_object\n                }\n            });\n\n            hasObjects = true;\n        });\n    });\n\n\n});\n\n// **Actualizar el cache**\nglobal.set(\"objsDB\", newCache);\n\n// **Devolver todos los mensajes**\nif (outputMessages.length > 0) {\n    return [outputMessages];\n}\n\nreturn null;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
+        "y": 1360,
+        "wires": [
+            [
+                "28893ebc89115f52"
+            ]
+        ]
+    },
+    {
+        "id": "28893ebc89115f52",
+        "type": "debug",
+        "z": "e2a52aad0a9cee3a",
+        "name": "debug 21",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 580,
+        "y": 1460,
+        "wires": []
+    },
+    {
+        "id": "5ba0e360071ab949",
+        "type": "debug",
+        "z": "e2a52aad0a9cee3a",
+        "name": "debug 22",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 380,
+        "y": 1240,
+        "wires": []
+    },
+    {
+        "id": "d938e66f995d1f87",
+        "type": "switch",
+        "z": "e2a52aad0a9cee3a",
+        "name": "",
+        "property": "payload.type",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "frame",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "object",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 570,
+        "y": 1360,
+        "wires": [
+            [
+                "5da698c46836b538",
+                "639b6fa1ebdcd212"
+            ],
+            [
+                "507f93d24a48ccef",
+                "aba218748d82f75a"
+            ]
+        ]
+    },
+    {
+        "id": "507f93d24a48ccef",
+        "type": "debug",
+        "z": "e2a52aad0a9cee3a",
+        "name": "debug 23",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 760,
+        "y": 1460,
+        "wires": []
+    },
+    {
+        "id": "639b6fa1ebdcd212",
+        "type": "template",
+        "z": "e2a52aad0a9cee3a",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "INSERT INTO frames_candidates (frame_id, n_objects, init_time, final_time) VALUES ({{payload.frame_id}}, {{payload.n_objects}}, {{payload.init_time_frame}}, {{payload.final_time_frame}})\n",
+        "output": "str",
+        "x": 760,
+        "y": 1300,
+        "wires": [
+            [
+                "4aa0604bc40a14b5"
+            ]
+        ]
+    },
+    {
+        "id": "4aa0604bc40a14b5",
+        "type": "change",
+        "z": "e2a52aad0a9cee3a",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg",
+                "dc": true
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 970,
+        "y": 1300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ce6c308aaa103937",
+        "type": "mysql",
+        "z": "e2a52aad0a9cee3a",
+        "mydb": "27da340f2eed545b",
+        "name": "",
+        "x": 1170,
+        "y": 1300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1f71f723cd85f7bb",
+        "type": "function",
+        "z": "e2a52aad0a9cee3a",
+        "name": "function 11",
+        "func": "// Verificar si el mensaje tiene datos\nif (msg.payload && Object.keys(msg.payload).length > 0) {\n    return [{\n        payload: {\n            camera_id: msg.payload.camera_id,\n            epoch_frame: msg.payload.epoch_frame,\n            status_frame: msg.payload.status_frame,\n            candidate_frame: msg.payload.candidate_frame\n        }\n    }];\n}\n\nreturn null; // No procesar si el mensaje está vacío\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 960,
+        "wires": [
+            [
+                "cb51d6418be73772"
+            ]
+        ]
+    },
+    {
+        "id": "d288b4d2a09545b3",
+        "type": "inject",
+        "z": "e2a52aad0a9cee3a",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "5",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 190,
+        "y": 1100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6abaa89782f8691e",
+        "type": "function",
+        "z": "e2a52aad0a9cee3a",
+        "name": "function 12",
+        "func": "var outputMessages = [];\n\nif (msg.payload && Object.keys(msg.payload).length > 0) {\n    let frame_id = msg.payload.camera_id + msg.payload.epoch_frame;\n\n    // **Payload para frame_summary**\n    outputMessages.push({\n        payload: {\n            type: \"frame\",\n            frame_id: frame_id,\n            n_objects: msg.payload.n_objects,\n            init_time_frame: msg.payload.init_time_frame,\n            final_time_frame: msg.payload.final_time_frame\n        }\n    });\n\n    // Extraer objetos de object_dict\n    Object.entries(msg.payload.object_dict || {}).forEach(([category, objects]) => {\n        objects.forEach(obj => {\n            outputMessages.push({\n                payload: {\n                    type: \"object\",\n                    object_id: obj.object_id,\n                    frame_id: frame_id,\n                    category_id: category,\n                    accuracy: obj.accuracy,\n                    coords: obj.coords,\n                    epoch_object: obj.epoch_object\n                }\n            });\n        });\n    });\n\n    return [outputMessages];\n}\n\nreturn null; // No hacer nada si el mensaje está vacío\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 1180,
+        "wires": [
+            [
+                "d938e66f995d1f87"
+            ]
+        ]
+    },
+    {
+        "id": "629b0e638302dbc6",
+        "type": "amqp-in",
+        "z": "e2a52aad0a9cee3a",
+        "name": "",
+        "broker": "045684e35cdae2c3",
+        "prefetch": 0,
+        "reconnectOnError": false,
+        "noAck": false,
+        "exchangeName": "attributes",
+        "exchangeType": "fanout",
+        "exchangeRoutingKey": "",
+        "exchangeDurable": true,
+        "queueName": "insertAttribute",
+        "queueType": "quorum",
+        "queueExclusive": false,
+        "queueDurable": true,
+        "queueAutoDelete": false,
+        "headers": "{}",
+        "x": 160,
+        "y": 1620,
+        "wires": [
+            [
+                "e3c20ff5db8b1bd2"
+            ]
+        ]
+    },
+    {
+        "id": "e3c20ff5db8b1bd2",
+        "type": "function",
+        "z": "e2a52aad0a9cee3a",
+        "name": "function 7",
+        "func": "var outputMessages = [];\n\nif (msg.payload && Object.keys(msg.payload).length > 0) {\n    let frame_id = msg.payload.camera_id + msg.payload.epoch_frame;\n\n    // **Payload para frame_summary**\n    outputMessages.push({\n        payload: {\n            type: \"frame\",\n            frame_id: frame_id,\n            n_objects: msg.payload.n_objects,\n            init_time_frame: msg.payload.init_time_frame,\n            final_time_frame: msg.payload.final_time_frame\n        }\n    });\n\n    // Extraer objetos de object_dict\n    Object.entries(msg.payload.object_dict || {}).forEach(([category, objects]) => {\n        objects.forEach(obj => {\n            outputMessages.push({\n                payload: {\n                    attribute_id: obj.attribute_id,\n                    object_id: obj.object_id,\n                    description: obj.description,\n                    accuracy: obj.accuracy_attribute,\n                    init_time: obj.init_time,\n                    final_time: obj.final_time,\n                    status: obj.status_attribute,\n                    coords: obj.coords_attribute\n                        ? obj.coords_attribute.join(\",\")  // Convierte el array en string\n                        : null  // Si no existe, asigna null\n                }\n            });\n        });\n    });\n\n    return [outputMessages];\n}\n\nreturn null; // No hacer nada si el mensaje está vacío\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 1620,
+        "wires": [
+            [
+                "fdd2a082f5fd7489"
+            ]
+        ]
+    },
+    {
+        "id": "fdd2a082f5fd7489",
+        "type": "template",
+        "z": "e2a52aad0a9cee3a",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "INSERT INTO detections \n(attribute_id, object_id, accuracy, init_time, final_time, coords)\nVALUES ({{payload.attribute_id}},\n{{payload.object_id}},\n{{payload.description}}, \n{{payload.accuracy}}, \n{{payload.init_time}}, \n{{payload.final_time}},\n{{payload.coords}}\n)",
+        "output": "str",
+        "x": 760,
+        "y": 1620,
+        "wires": [
+            [
+                "5455958d1f47e2c9"
+            ]
+        ]
+    },
+    {
+        "id": "892f6307e51d7cac",
+        "type": "change",
+        "z": "e2a52aad0a9cee3a",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg",
+                "dc": true
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 970,
+        "y": 1620,
+        "wires": [
+            [
+                "1d394cce888872dc"
+            ]
+        ]
+    },
+    {
+        "id": "1d394cce888872dc",
+        "type": "mysql",
+        "z": "e2a52aad0a9cee3a",
+        "mydb": "27da340f2eed545b",
+        "name": "",
+        "x": 1170,
+        "y": 1620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5455958d1f47e2c9",
+        "type": "debug",
+        "z": "e2a52aad0a9cee3a",
+        "name": "debug 24",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 960,
+        "y": 1560,
+        "wires": []
+    },
+    {
+        "id": "17250bcca3756eb7",
+        "type": "amqp-in",
+        "z": "67431c152629ac42",
+        "name": "",
+        "broker": "045684e35cdae2c3",
+        "prefetch": 0,
+        "reconnectOnError": true,
+        "noAck": false,
+        "exchangeName": "frames",
+        "exchangeType": "fanout",
+        "exchangeRoutingKey": "",
+        "exchangeDurable": true,
+        "queueName": "insertFrameDB",
+        "queueType": "classic",
+        "queueExclusive": false,
+        "queueDurable": true,
+        "queueAutoDelete": false,
+        "headers": "{}",
+        "x": 570,
+        "y": 260,
+        "wires": [
+            [
+                "1014866ce4d13718"
+            ]
+        ]
+    },
+    {
+        "id": "c4b8292ed12f52ee",
+        "type": "mysql",
+        "z": "67431c152629ac42",
+        "mydb": "27da340f2eed545b",
+        "name": "",
+        "x": 1610,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "074184c0c8f6ce61",
+        "type": "function",
+        "z": "67431c152629ac42",
+        "name": "function 13",
+        "func": "// Obtener el caché correspondiente\nvar cache = global.get(\"frames\") || [];\n\n// Agregar el nuevo mensaje al caché\ncache.push(msg.payload);\n\n// Guardar en el contexto global\nglobal.set(\"frames\", cache);\n\nreturn null; // No enviamos nada todavía\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 820,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b113824637cb9a2f",
+        "type": "debug",
+        "z": "67431c152629ac42",
+        "name": "debug 25",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1180,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "94c30c9fe0f78631",
+        "type": "template",
+        "z": "67431c152629ac42",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "INSERT INTO frames (camera_id, epoch, status, candidate) VALUES ({{payload.camera_id}}, {{payload.epoch_frame}}, {{payload.status_frame}}, {{payload.candidate_frame}})\n",
+        "output": "str",
+        "x": 1140,
+        "y": 340,
+        "wires": [
+            [
+                "33850913ccaa42af"
+            ]
+        ]
+    },
+    {
+        "id": "6f837ecb49f1e424",
+        "type": "function",
+        "z": "67431c152629ac42",
+        "name": "function 14",
+        "func": "// Obtener los mensajes almacenados en caché\nvar cache = global.get(\"frames\") || [];\n\n// Si hay datos en caché\nif (cache.length > 0) {\n    // Copiar los datos actuales antes de vaciar el caché\n    var cacheCopy = [...cache];\n\n    // Devolver múltiples mensajes\n    var messages = cacheCopy.map(item => ({\n        payload: {\n            camera_id: item.camera_id,\n            epoch_frame: item.epoch_frame,\n            status_frame: item.status_frame,\n            candidate_frame: item.candidate_frame\n        }\n    }));\n\n    // Vaciar solo los datos procesados\n    global.set(\"frames\", cache.filter(item => !cacheCopy.includes(item)));\n\n    return [messages];\n}\n\nreturn null; // No hacer nada si no hay datos\n\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 820,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "33850913ccaa42af",
+        "type": "change",
+        "z": "67431c152629ac42",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg",
+                "dc": true
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1390,
+        "y": 340,
+        "wires": [
+            [
+                "c4b8292ed12f52ee"
+            ]
+        ]
+    },
+    {
+        "id": "cb4aa59bd50a6160",
+        "type": "amqp-in",
+        "z": "67431c152629ac42",
+        "name": "",
+        "broker": "045684e35cdae2c3",
+        "prefetch": 0,
+        "reconnectOnError": true,
+        "noAck": false,
+        "exchangeName": "objs_candidate",
+        "exchangeType": "fanout",
+        "exchangeRoutingKey": "",
+        "exchangeDurable": true,
+        "queueName": "objsDB",
+        "queueType": "classic",
+        "queueExclusive": false,
+        "queueDurable": true,
+        "queueAutoDelete": false,
+        "headers": "{}",
+        "x": 600,
+        "y": 520,
+        "wires": [
+            [
+                "d0fe9e34d319c447",
+                "d66539957a34018a"
+            ]
+        ]
+    },
+    {
+        "id": "2a07ec86c82f21dc",
+        "type": "inject",
+        "z": "67431c152629ac42",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "5",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 610,
+        "y": 600,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7fc7cde470c5aadb",
+        "type": "template",
+        "z": "67431c152629ac42",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "INSERT INTO object \n(frame_id, object_id, category_id, accuracy, coords, epoch, tracking_id, candidate)\nVALUES ({{payload.frame_id}},\n{{payload.object_id}},\n{{payload.category_id}},\n{{payload.accuracy}}, \n\"{{{payload.coords}}}\", \n{{payload.epoch_object}},\n{{payload.id_tracking}},\n{{payload.candidate}})",
+        "output": "str",
+        "x": 1180,
+        "y": 600,
+        "wires": [
+            [
+                "eb3075ed195d4443",
+                "2b86a0beb8c5910f"
+            ]
+        ]
+    },
+    {
+        "id": "7d5e0def6d345a80",
+        "type": "function",
+        "z": "67431c152629ac42",
+        "name": "function 15",
+        "func": "var cache = global.get(\"objsDB\") || [];\n\ncache.push(msg.payload);\n// Guardar en el contexto global\nglobal.set(\"objsDB\", cache);\n\nreturn null; // No enviamos nada todavía\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 830,
+        "y": 520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "cf13662caf4fb72e",
+        "type": "function",
+        "z": "67431c152629ac42",
+        "name": "function 16",
+        "func": "var cache = global.get(\"objsDB\") || [];\nvar outputMessages = [];\nvar newCache = []; // Para almacenar solo los mensajes no procesados\n\ncache.forEach((message) => {\n    let frame_id = message.camera_id + message.epoch_frame;\n    let hasObjects = false;\n\n    // **Payload para frame_summary**\n    outputMessages.push({\n        payload: {\n            type: \"frame\",\n            frame_id: frame_id,\n            n_objects: message.n_objects,\n            init_time_frame: message.init_time_frame,\n            final_time_frame: message.final_time_frame\n        }\n    });\n\n    // Extraer objetos de object_dict\n    Object.entries(message.object_dict || {}).forEach(([category, objects]) => {\n        objects.forEach(obj => {\n            outputMessages.push({\n                payload: {\n                    type: \"object\",\n                    frame_id: frame_id,\n                    category_id: category,\n                    accuracy: obj.accuracy,\n                    coords: obj.coords,\n                    epoch_object: obj.epoch_object\n                }\n            });\n\n            hasObjects = true;\n        });\n    });\n\n\n});\n\n// **Actualizar el cache**\nglobal.set(\"objsDB\", newCache);\n\n// **Devolver todos los mensajes**\nif (outputMessages.length > 0) {\n    return [outputMessages];\n}\n\nreturn null;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 820,
+        "y": 600,
+        "wires": [
+            [
+                "3eff36c4f98adf1b"
+            ]
+        ]
+    },
+    {
+        "id": "3eff36c4f98adf1b",
+        "type": "debug",
+        "z": "67431c152629ac42",
+        "name": "debug 26",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1000,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "d0fe9e34d319c447",
+        "type": "debug",
+        "z": "67431c152629ac42",
+        "name": "debug 27",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 800,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "bee42bbf4c4c4cf7",
+        "type": "switch",
+        "z": "67431c152629ac42",
+        "name": "",
+        "property": "payload.type",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "frame",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "object",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 990,
+        "y": 600,
+        "wires": [
+            [
+                "b113824637cb9a2f",
+                "3b78d7a3472280e8"
+            ],
+            [
+                "52aeb106dc448751",
+                "7fc7cde470c5aadb"
+            ]
+        ]
+    },
+    {
+        "id": "52aeb106dc448751",
+        "type": "debug",
+        "z": "67431c152629ac42",
+        "name": "debug 28",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1180,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "3b78d7a3472280e8",
+        "type": "template",
+        "z": "67431c152629ac42",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "INSERT INTO frames_candidates (frame_id, n_objects, init_time, final_time) VALUES ({{payload.frame_id}}, {{payload.n_objects}}, {{payload.init_time_frame}}, {{payload.final_time_frame}})\n",
+        "output": "str",
+        "x": 1180,
+        "y": 540,
+        "wires": [
+            [
+                "2b86a0beb8c5910f"
+            ]
+        ]
+    },
+    {
+        "id": "2b86a0beb8c5910f",
+        "type": "change",
+        "z": "67431c152629ac42",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg",
+                "dc": true
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1390,
+        "y": 540,
+        "wires": [
+            [
+                "9c48b5ac7043cd8f"
+            ]
+        ]
+    },
+    {
+        "id": "1014866ce4d13718",
+        "type": "function",
+        "z": "67431c152629ac42",
+        "name": "function 17",
+        "func": "// Verificar si el mensaje tiene datos\nif (msg.payload && Object.keys(msg.payload).length > 0) {\n    return [{\n        payload: {\n            camera_id: msg.payload.camera_id,\n            epoch_frame: msg.payload.epoch_frame,\n            status_frame: msg.payload.status_frame,\n            candidate_frame: msg.payload.candidate_frame\n        }\n    }];\n}\n\nreturn null; // No procesar si el mensaje está vacío\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 830,
+        "y": 200,
+        "wires": [
+            [
+                "94c30c9fe0f78631"
+            ]
+        ]
+    },
+    {
+        "id": "70c643deaa9016e3",
+        "type": "inject",
+        "z": "67431c152629ac42",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "5",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 610,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d66539957a34018a",
+        "type": "function",
+        "z": "67431c152629ac42",
+        "name": "function 18",
+        "func": "var outputMessages = [];\n\nif (msg.payload && Object.keys(msg.payload).length > 0) {\n    let frame_id = msg.payload.camera_id + msg.payload.epoch_frame;\n\n    // **Payload para frame_summary**\n    outputMessages.push({\n        payload: {\n            type: \"frame\",\n            frame_id: frame_id,\n            n_objects: msg.payload.n_objects,\n            init_time_frame: msg.payload.init_time_frame,\n            final_time_frame: msg.payload.final_time_frame\n        }\n    });\n\n    // Extraer objetos de object_dict\n    Object.entries(msg.payload.object_dict || {}).forEach(([category, objects]) => {\n        objects.forEach(obj => {\n            outputMessages.push({\n                payload: {\n                    type: \"object\",\n                    frame_id: frame_id,\n                    object_id: obj.object_id,\n                    category_id: category,\n                    accuracy: obj.accuracy,\n                    coords: obj.coords,\n                    epoch_object: obj.epoch_object,\n                    id_tracking: obj.id_tracking,\n                    candidate: obj.candidate\n                    }\n                })\n            });\n        });\n\n    return [outputMessages];\n}\n\nreturn null; // No hacer nada si el mensaje está vacío\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 810,
+        "y": 420,
+        "wires": [
+            [
+                "bee42bbf4c4c4cf7"
+            ]
+        ]
+    },
+    {
+        "id": "4b245738046cfe36",
+        "type": "amqp-in",
+        "z": "67431c152629ac42",
+        "name": "",
+        "broker": "045684e35cdae2c3",
+        "prefetch": 0,
+        "reconnectOnError": true,
+        "noAck": false,
+        "exchangeName": "attributes",
+        "exchangeType": "fanout",
+        "exchangeRoutingKey": "",
+        "exchangeDurable": true,
+        "queueName": "insertAttribute",
+        "queueType": "classic",
+        "queueExclusive": false,
+        "queueDurable": true,
+        "queueAutoDelete": false,
+        "headers": "{}",
+        "x": 580,
+        "y": 860,
+        "wires": [
+            [
+                "daf773dcaee1c01a",
+                "2bb9974f83e7285b"
+            ]
+        ]
+    },
+    {
+        "id": "2bb9974f83e7285b",
+        "type": "function",
+        "z": "67431c152629ac42",
+        "name": "function 19",
+        "func": "var outputMessages = [];\n\nif (msg.payload && Object.keys(msg.payload).length > 0) {\n    // Extraer objetos de object_dict\n    Object.entries(msg.payload.object_dict || {}).forEach(([category, objects]) => {\n        objects.forEach(obj => {\n            if (obj.candidate && obj.status_attribute != 0 && obj.status_attribute != null){\n                outputMessages.push({\n                    payload: {\n                        attribute_id: obj.attribute_id,\n                        object_id: obj.object_id,\n                        description: obj.description,\n                        accuracy: obj.accuracy_attribute,\n                        init_time: obj.init_time,\n                        final_time: obj.final_time,\n                        status: obj.status_attribute,\n                        coords: obj.coords_attribute\n                            ? obj.coords_attribute.join(\",\")  // Convierte el array en string\n                            : null  // Si no existe, asigna null\n                    }\n                });\n            }\n            else{\n                return null\n            }\n\n        });\n    });\n\n    return [outputMessages];\n}\n\nreturn null; // No hacer nada si el mensaje está vacío\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 800,
+        "y": 860,
+        "wires": [
+            [
+                "341124f58fc15cd1",
+                "c229183e9f522914"
+            ]
+        ]
+    },
+    {
+        "id": "3e2e8ddfe5aa1d2a",
+        "type": "template",
+        "z": "67431c152629ac42",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "INSERT INTO detections \n(attribute_id, object_id, description, accuracy, init_time, final_time, status, coords)\nVALUES (\n{{payload.attribute_id}},\n{{payload.object_id}},\n{{#payload.description}}'{{payload.description}}'{{/payload.description}}{{^payload.description}}NULL{{/payload.description}},\n{{#payload.accuracy}}{{payload.accuracy}}{{/payload.accuracy}}{{^payload.accuracy}}NULL{{/payload.accuracy}},\n{{#payload.init_time}}{{payload.init_time}}{{/payload.init_time}}{{^payload.init_time}}NULL{{/payload.init_time}},\n{{#payload.final_time}}{{payload.final_time}}{{/payload.final_time}}{{^payload.final_time}}NULL{{/payload.final_time}},\n{{#payload.status}}{{payload.status}}{{/payload.status}}{{^payload.status}}NULL{{/payload.status}},\n{{#payload.coords}}'{{payload.coords}}'{{/payload.coords}}{{^payload.coords}}NULL{{/payload.coords}}\n)\n",
+        "output": "str",
+        "x": 1180,
+        "y": 860,
+        "wires": [
+            [
+                "2b13db10fb9275e4",
+                "3b4bc74f6f715f80"
+            ]
+        ]
+    },
+    {
+        "id": "3b4bc74f6f715f80",
+        "type": "change",
+        "z": "67431c152629ac42",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg",
+                "dc": true
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1390,
+        "y": 860,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2b13db10fb9275e4",
+        "type": "debug",
+        "z": "67431c152629ac42",
+        "name": "debug 29",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1360,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "eb3075ed195d4443",
+        "type": "debug",
+        "z": "67431c152629ac42",
+        "name": "debug 30",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1400,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "341124f58fc15cd1",
+        "type": "debug",
+        "z": "67431c152629ac42",
+        "name": "debug 31",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1000,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "daf773dcaee1c01a",
+        "type": "debug",
+        "z": "67431c152629ac42",
+        "name": "debug 32",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 740,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "9c48b5ac7043cd8f",
+        "type": "mysql",
+        "z": "67431c152629ac42",
+        "mydb": "27da340f2eed545b",
+        "name": "",
+        "x": 1610,
+        "y": 540,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b0421f8e257801f3",
+        "type": "mysql",
+        "z": "67431c152629ac42",
+        "mydb": "27da340f2eed545b",
+        "name": "",
+        "x": 1610,
+        "y": 860,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9d2d7a3a73ac5f79",
+        "type": "switch",
+        "z": "67431c152629ac42",
+        "name": "",
+        "property": "payload.attribute_id",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "2",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 950,
+        "y": 1100,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "c229183e9f522914",
+        "type": "delay",
+        "z": "67431c152629ac42",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "200",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1010,
+        "y": 860,
+        "wires": [
+            [
+                "3e2e8ddfe5aa1d2a"
+            ]
+        ]
+    },
+    {
+        "id": "fb01044c77ca8604",
+        "type": "amqp-in",
+        "z": "67431c152629ac42",
+        "name": "",
+        "broker": "045684e35cdae2c3",
+        "prefetch": 0,
+        "reconnectOnError": true,
+        "noAck": false,
+        "exchangeName": "alert_exchange",
+        "exchangeType": "fanout",
+        "exchangeRoutingKey": "",
+        "exchangeDurable": true,
+        "queueName": "alert_DB",
+        "queueType": "classic",
+        "queueExclusive": false,
+        "queueDurable": true,
+        "queueAutoDelete": false,
+        "headers": "{}",
+        "x": 600,
+        "y": 1000,
+        "wires": [
+            [
+                "d41c7313d632af73",
+                "d96fc12dd501b0a3"
+            ]
+        ]
+    },
+    {
+        "id": "d41c7313d632af73",
+        "type": "function",
+        "z": "67431c152629ac42",
+        "name": "function 20",
+        "func": "// Verificar si el mensaje tiene datos\nif (msg.payload && Object.keys(msg.payload).length > 0) {\n    return [{\n        payload: {\n            category: msg.payload.category,\n            type: msg.payload.type,\n            epoch_object: msg.payload.epoch_object,\n            epoch_frame: msg.payload.epoch_frame,\n            camera_id: msg.payload.camera_id,\n            object_id: msg.payload.object_id,\n            message: msg.payload.message,\n        }\n    }];\n}\n\nreturn null; // No procesar si el mensaje está vacío\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 810,
+        "y": 1000,
+        "wires": [
+            [
+                "c56293056d209284",
+                "389b311bb6aa418c"
+            ]
+        ]
+    },
+    {
+        "id": "333c94595a388b67",
+        "type": "template",
+        "z": "67431c152629ac42",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "INSERT INTO eventos (categoria, tipo, mensaje, object_id, epoch_object, epoch_frame, camera_id) \nVALUES ({{payload.category}}, {{payload.type}}, '{{payload.message}}', {{payload.object_id}}, {{payload.epoch_object}}, {{payload.epoch_frame}}, {{payload.camera_id}})\n",
+        "output": "str",
+        "x": 1180,
+        "y": 1000,
+        "wires": [
+            [
+                "b2bff50b6d406fbb",
+                "cbf10c6a570f31cb"
+            ]
+        ]
+    },
+    {
+        "id": "b2bff50b6d406fbb",
+        "type": "change",
+        "z": "67431c152629ac42",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg",
+                "dc": true
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1390,
+        "y": 1000,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c62ee4a5c222af73",
+        "type": "mysql",
+        "z": "67431c152629ac42",
+        "mydb": "27da340f2eed545b",
+        "name": "",
+        "x": 1610,
+        "y": 1000,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d96fc12dd501b0a3",
+        "type": "debug",
+        "z": "67431c152629ac42",
+        "name": "debug 33",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 780,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "c56293056d209284",
+        "type": "debug",
+        "z": "67431c152629ac42",
+        "name": "debug 34",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1020,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "cbf10c6a570f31cb",
+        "type": "debug",
+        "z": "67431c152629ac42",
+        "name": "debug 35",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1380,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "389b311bb6aa418c",
+        "type": "delay",
+        "z": "67431c152629ac42",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "200",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1010,
+        "y": 1000,
+        "wires": [
+            [
+                "333c94595a388b67"
+            ]
+        ]
+    }
+]

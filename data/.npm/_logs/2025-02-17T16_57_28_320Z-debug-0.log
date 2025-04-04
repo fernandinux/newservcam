@@ -1,0 +1,144 @@
+0 verbose cli /usr/local/bin/node /usr/local/bin/npm
+1 info using npm@10.8.2
+2 info using node@v20.18.1
+3 silly config load:file:/usr/local/lib/node_modules/npm/npmrc
+4 silly config load:file:/data/.npmrc
+5 silly config load:file:/usr/src/node-red/.npmrc
+6 silly config load:file:/usr/local/etc/npmrc
+7 verbose title npm install node-red-contrib-amqp@1.0.2
+8 verbose argv "install" "--no-audit" "--no-update-notifier" "--no-fund" "--save" "--save-prefix" "~" "--omit" "dev" "--engine-strict" "node-red-contrib-amqp@1.0.2"
+9 verbose logfile logs-max:10 dir:/data/.npm/_logs/2025-02-17T16_57_28_320Z-
+10 verbose logfile /data/.npm/_logs/2025-02-17T16_57_28_320Z-debug-0.log
+11 silly packumentCache heap:4345298944 maxSize:1086324736 maxEntrySize:543162368
+12 silly logfile done cleaning log files
+13 silly idealTree buildDeps
+14 silly fetch manifest node-red-contrib-amqp@1.0.2
+15 silly packumentCache full:https://registry.npmjs.org/node-red-contrib-amqp cache-miss
+16 http fetch GET 200 https://registry.npmjs.org/node-red-contrib-amqp 940ms (cache miss)
+17 silly packumentCache full:https://registry.npmjs.org/node-red-contrib-amqp set size:undefined disposed:false
+18 silly placeDep ROOT node-red-contrib-amqp@1.0.2 OK for: node-red-project@0.0.1 want: 1.0.2
+19 silly fetch manifest amqp-ts@^1.0.0
+20 silly packumentCache full:https://registry.npmjs.org/amqp-ts cache-miss
+21 silly fetch manifest getos@^3.1.1
+22 silly packumentCache full:https://registry.npmjs.org/getos cache-miss
+23 http fetch GET 200 https://registry.npmjs.org/getos 205ms (cache miss)
+24 silly packumentCache full:https://registry.npmjs.org/getos set size:undefined disposed:false
+25 http fetch GET 200 https://registry.npmjs.org/amqp-ts 737ms (cache miss)
+26 silly packumentCache full:https://registry.npmjs.org/amqp-ts set size:undefined disposed:false
+27 silly placeDep ROOT amqp-ts@1.8.0 OK for: node-red-contrib-amqp@1.0.2 want: ^1.0.0
+28 silly placeDep ROOT getos@3.2.1 OK for: node-red-contrib-amqp@1.0.2 want: ^3.1.1
+29 silly fetch manifest @types/node@^12.7.2
+30 silly packumentCache full:https://registry.npmjs.org/@types%2fnode cache-miss
+31 silly fetch manifest amqplib@^0.4.1
+32 silly packumentCache full:https://registry.npmjs.org/amqplib cache-miss
+33 silly fetch manifest bluebird@^3.3.5
+34 silly packumentCache full:https://registry.npmjs.org/bluebird cache-miss
+35 http fetch GET 200 https://registry.npmjs.org/amqplib 117ms (cache miss)
+36 silly packumentCache full:https://registry.npmjs.org/amqplib set size:undefined disposed:false
+37 silly fetch manifest winston@^2.2.0
+38 silly packumentCache full:https://registry.npmjs.org/winston cache-miss
+39 http fetch GET 200 https://registry.npmjs.org/winston 80ms (cache miss)
+40 silly packumentCache full:https://registry.npmjs.org/winston set size:undefined disposed:false
+41 silly fetch manifest async@^3.2.0
+42 silly packumentCache full:https://registry.npmjs.org/async cache-miss
+43 http fetch GET 200 https://registry.npmjs.org/bluebird 229ms (cache miss)
+44 silly packumentCache full:https://registry.npmjs.org/bluebird set size:undefined disposed:false
+45 http fetch GET 200 https://registry.npmjs.org/@types%2fnode 274ms (cache miss)
+46 silly packumentCache full:https://registry.npmjs.org/@types%2fnode set size:undefined disposed:false
+47 http fetch GET 200 https://registry.npmjs.org/async 240ms (cache miss)
+48 silly packumentCache full:https://registry.npmjs.org/async set size:undefined disposed:false
+49 silly placeDep ROOT @types/node@12.20.55 OK for: amqp-ts@1.8.0 want: ^12.7.2
+50 silly placeDep ROOT amqplib@0.4.2 OK for: amqp-ts@1.8.0 want: ^0.4.1
+51 silly placeDep ROOT bluebird@3.7.2 OK for: amqp-ts@1.8.0 want: ^3.3.5
+52 silly placeDep ROOT winston@2.4.7 OK for: amqp-ts@1.8.0 want: ^2.2.0
+53 silly fetch manifest when@~3.6.2
+54 silly packumentCache full:https://registry.npmjs.org/when cache-miss
+55 silly fetch manifest bitsyntax@~0.0.4
+56 silly packumentCache full:https://registry.npmjs.org/bitsyntax cache-miss
+57 silly fetch manifest readable-stream@1.x >=1.1.9
+58 silly packumentCache full:https://registry.npmjs.org/readable-stream cache-miss
+59 http fetch GET 200 https://registry.npmjs.org/readable-stream 77ms (cache updated)
+60 silly packumentCache full:https://registry.npmjs.org/readable-stream set size:undefined disposed:false
+61 silly fetch manifest buffer-more-ints@0.0.2
+62 silly packumentCache full:https://registry.npmjs.org/buffer-more-ints cache-miss
+63 http fetch GET 200 https://registry.npmjs.org/when 153ms (cache miss)
+64 silly packumentCache full:https://registry.npmjs.org/when set size:undefined disposed:false
+65 silly fetch manifest eyes@0.1.x
+66 silly packumentCache full:https://registry.npmjs.org/eyes cache-miss
+67 http fetch GET 200 https://registry.npmjs.org/eyes 73ms (cache miss)
+68 silly packumentCache full:https://registry.npmjs.org/eyes set size:undefined disposed:false
+69 silly fetch manifest async@^2.6.4
+70 silly packumentCache full:https://registry.npmjs.org/async cache-miss
+71 http fetch GET 200 https://registry.npmjs.org/async 17ms (cache hit)
+72 silly packumentCache full:https://registry.npmjs.org/async set size:230496 disposed:false
+73 silly fetch manifest cycle@1.0.x
+74 silly packumentCache full:https://registry.npmjs.org/cycle cache-miss
+75 http fetch GET 200 https://registry.npmjs.org/cycle 70ms (cache miss)
+76 silly packumentCache full:https://registry.npmjs.org/cycle set size:undefined disposed:false
+77 silly fetch manifest colors@1.0.x
+78 silly packumentCache full:https://registry.npmjs.org/colors cache-miss
+79 http fetch GET 200 https://registry.npmjs.org/colors 72ms (cache miss)
+80 silly packumentCache full:https://registry.npmjs.org/colors set size:undefined disposed:false
+81 silly fetch manifest isstream@0.1.x
+82 silly packumentCache full:https://registry.npmjs.org/isstream cache-miss
+83 http fetch GET 200 https://registry.npmjs.org/isstream 58ms (cache miss)
+84 silly packumentCache full:https://registry.npmjs.org/isstream set size:undefined disposed:false
+85 silly fetch manifest stack-trace@0.0.x
+86 silly packumentCache full:https://registry.npmjs.org/stack-trace cache-miss
+87 http fetch GET 200 https://registry.npmjs.org/stack-trace 67ms (cache miss)
+88 silly packumentCache full:https://registry.npmjs.org/stack-trace set size:undefined disposed:false
+89 http fetch GET 200 https://registry.npmjs.org/bitsyntax 725ms (cache miss)
+90 silly packumentCache full:https://registry.npmjs.org/bitsyntax set size:undefined disposed:false
+91 http fetch GET 200 https://registry.npmjs.org/buffer-more-ints 742ms (cache miss)
+92 silly packumentCache full:https://registry.npmjs.org/buffer-more-ints set size:undefined disposed:false
+93 silly placeDep ROOT bitsyntax@0.0.4 OK for: amqplib@0.4.2 want: ~0.0.4
+94 silly placeDep ROOT buffer-more-ints@0.0.2 OK for: amqplib@0.4.2 want: 0.0.2
+95 silly placeDep node_modules/amqplib readable-stream@1.1.14 OK for: amqplib@0.4.2 want: 1.x >=1.1.9
+96 silly placeDep ROOT when@3.6.4 OK for: amqplib@0.4.2 want: ~3.6.2
+97 silly fetch manifest isarray@0.0.1
+98 silly packumentCache full:https://registry.npmjs.org/isarray cache-miss
+99 silly fetch manifest string_decoder@~0.10.x
+100 silly packumentCache full:https://registry.npmjs.org/string_decoder cache-miss
+101 http fetch GET 200 https://registry.npmjs.org/string_decoder 64ms (cache updated)
+102 silly packumentCache full:https://registry.npmjs.org/string_decoder set size:undefined disposed:false
+103 http fetch GET 200 https://registry.npmjs.org/isarray 79ms (cache updated)
+104 silly packumentCache full:https://registry.npmjs.org/isarray set size:undefined disposed:false
+105 silly placeDep ROOT async@3.2.6 OK for: getos@3.2.1 want: ^3.2.0
+106 silly placeDep node_modules/winston async@2.6.4 OK for: winston@2.4.7 want: ^2.6.4
+107 silly placeDep ROOT colors@1.0.3 OK for: winston@2.4.7 want: 1.0.x
+108 silly placeDep ROOT cycle@1.0.3 OK for: winston@2.4.7 want: 1.0.x
+109 silly placeDep ROOT eyes@0.1.8 OK for: winston@2.4.7 want: 0.1.x
+110 silly placeDep ROOT isstream@0.1.2 OK for: winston@2.4.7 want: 0.1.x
+111 silly placeDep ROOT stack-trace@0.0.10 OK for: winston@2.4.7 want: 0.0.x
+112 silly fetch manifest lodash@^4.17.14
+113 silly packumentCache full:https://registry.npmjs.org/lodash cache-miss
+114 http fetch GET 200 https://registry.npmjs.org/lodash 93ms (cache miss)
+115 silly packumentCache full:https://registry.npmjs.org/lodash set size:undefined disposed:false
+116 silly placeDep node_modules/amqplib isarray@0.0.1 OK for: readable-stream@1.1.14 want: 0.0.1
+117 silly placeDep node_modules/amqplib string_decoder@0.10.31 OK for: readable-stream@1.1.14 want: ~0.10.x
+118 silly placeDep ROOT lodash@4.17.21 OK for: async@2.6.4 want: ^4.17.14
+119 verbose stack Error: Unsupported engine
+119 verbose stack     at checkEngine (/usr/local/lib/node_modules/npm/node_modules/npm-install-checks/lib/index.js:14:25)
+119 verbose stack     at #checkEngineAndPlatform (/usr/local/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/build-ideal-tree.js:198:11)
+119 verbose stack     at Arborist.buildIdealTree (/usr/local/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/build-ideal-tree.js:184:41)
+119 verbose stack     at async Promise.all (index 1)
+119 verbose stack     at async Arborist.reify (/usr/local/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/reify.js:131:5)
+119 verbose stack     at async Install.exec (/usr/local/lib/node_modules/npm/lib/commands/install.js:150:5)
+119 verbose stack     at async Npm.exec (/usr/local/lib/node_modules/npm/lib/npm.js:207:9)
+119 verbose stack     at async module.exports (/usr/local/lib/node_modules/npm/lib/cli/entry.js:74:5)
+120 verbose pkgid amqplib@0.4.2
+121 error code EBADENGINE
+122 error engine Unsupported engine
+123 error engine Not compatible with your version of node/npm: amqplib@0.4.2
+124 error notsup Not compatible with your version of node/npm: amqplib@0.4.2
+124 error notsup Required: {"node":">=0.8 <6 || ^6"}
+124 error notsup Actual:   {"npm":"10.8.2","node":"v20.18.1"}
+125 silly unfinished npm timer reify 1739811448624
+126 silly unfinished npm timer reify:loadTrees 1739811448634
+127 verbose cwd /data
+128 verbose os Linux 6.8.0-52-generic
+129 verbose node v20.18.1
+130 verbose npm  v10.8.2
+131 verbose exit 1
+132 verbose code 1
+133 error A complete log of this run can be found in: /data/.npm/_logs/2025-02-17T16_57_28_320Z-debug-0.log
