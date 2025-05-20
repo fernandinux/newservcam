@@ -53,14 +53,14 @@ DATA_ATRIBUTO_STATUS = "status_attribute"
 DATA_OBJETO_ID_CONCATENADO = "object_id"
 
 # Variables RabbitMQ
-AMQP_URL = 'amqp://root:winempresas@192.168.101.3:5672/%2F'
+AMQP_URL = 'amqp://root:winempresas@10.23.63.79:5672/%2F'
 EXCHANGE_IN = "ocr_exchange"
 QUEUE_IN = "ocrQueue"
 EXCHANGE_OUT = 'attributes'
 
 # Config Redis
 #REDIS_HOST = "10.23.63.56"
-REDIS_HOST = "192.168.101.3"
+REDIS_HOST = "10.23.63.79"
 REDIS_PORT = 6379
 REDIS_DB = 0
 REDIS_TIMEOUT = 5

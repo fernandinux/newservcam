@@ -53,14 +53,14 @@ DATA_ATRIBUTO_STATUS = "status_attribute"
 
 
 # Variables RabbitMQ
-AMQP_URL = 'amqp://root:winempresas@192.168.101.3:5672/%2F'
+AMQP_URL = 'amqp://root:winempresas@10.23.63.79:5672/%2F'
 EXCHANGE_IN = "objs_candidate"
 QUEUE_IN = "objsplate"
 EXCHANGE_OUT = 'ocr_exchange'
 
 # Config Redis
 #REDIS_HOST = "10.23.63.56"
-REDIS_HOST = "192.168.101.3"
+REDIS_HOST = "10.23.63.79"
 REDIS_PORT = 6379
 REDIS_DB = 0
 REDIS_TIMEOUT = 5

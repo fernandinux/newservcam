@@ -17,7 +17,7 @@ logger = configurar_logger( name    = FILE_NAME_LOG,
                             nivel   = logging.DEBUG)
 
 redis_pool = redis.ConnectionPool(
-    host='10.23.63.56', 
+    host='10.23.63.79', 
     port=6379, 
     db=0,
     socket_timeout=5

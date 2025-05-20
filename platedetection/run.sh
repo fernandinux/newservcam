@@ -9,7 +9,7 @@
 # --gpus all  \
 # platedetection:202504
 
-for i in $(seq 4 4); do
+for i in $(seq 1 7); do
   name="plateDetection$i"
 
   # Solo el primero monta ./log:/log
